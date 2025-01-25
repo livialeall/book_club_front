@@ -1,0 +1,17 @@
+/* Variaveis */
+:root {
+    --background-light:#FFF1E9;
+    --enfase-1-100:#BF7839;    
+    --enfase-2-100:#73351F;
+}
+
+.display-flex-center{
+    display: flex;
+    flex-direction: row;
+}
+
+body{
+    background-color: var(--background-light);
+    max-width: 100vw;
+    max-height: 100vh;
+}

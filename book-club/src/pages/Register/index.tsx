@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { User } from "../../interfaces/user";
+import { NewUser } from "../../interfaces/user";
 import { create_user } from "../../routes/users";
 import { checkInformations } from "../../utils/validations";
 
 const Register = () => {
-  const [newUser, setNewUser] = useState<User>({
+  const [newUser, setNewUser] = useState<NewUser>({
     name: "",
     email: "",
     contact: "",

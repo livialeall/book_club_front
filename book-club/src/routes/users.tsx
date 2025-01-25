@@ -1,6 +1,6 @@
-import { User } from "../interfaces/user";
+import { NewUser, User } from "../interfaces/user";
 
-export const create_user = (newUser:User) => {
+export const create_user = (newUser:NewUser) => {
   try {
     const response = fetch(`http://127.0.0.1:8800/create_user`, {
       method: "POST",
@@ -14,3 +14,19 @@ export const create_user = (newUser:User) => {
     return err;
   }
 };
+
+export const login = (user:User) => {
+  try {
+    const response = fetch(`http://127.0.0.1:8800/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    });
+    return response;
+  } catch (err) {
+    return err;
+  }
+};
+

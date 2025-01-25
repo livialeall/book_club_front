@@ -1,12 +1,21 @@
 import Button from "../ui/components/Button";
+import Login from "../ui/components/Login";
+
 
 const Home = () => {
   return (
-    <div>
-      <span>Já é cadastrado(a)?</span>
-      <Button type={null} text={"Entre na sua conta"} route={"/login"}></Button>
-      <span>ou</span>
-      <Button type={null} text={"Faça seu cadastro"} route={"/register"}></Button>
+    <div className="display-flex-center">
+      <div>TEXTO INTERESSANTE AQUI</div>
+      <div>
+        <span>Bem vindo(a)!</span>
+        <Login></Login>
+        <span>ou</span>
+        <Button
+          type={null}
+          text={"Faça seu cadastro"}
+          route={"/register"}
+        ></Button>
+      </div>
     </div>
   );
 };
