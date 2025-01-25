@@ -1,6 +1,7 @@
 /* Variaveis */
 :root {
     --background-light:#FFF1E9;
+    --background-medium:#ca967a;
     --enfase-1-100:#BF7839;    
     --enfase-2-100:#73351F;
     --border-radius-medium:5px;
@@ -30,8 +31,6 @@
     display: flex;
     align-items: flex-start;
 }
-
-
 
 body{
     background-color: white;

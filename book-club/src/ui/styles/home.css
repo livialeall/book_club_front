@@ -6,7 +6,8 @@
 
 .img{
     width: 50%;
-    background-color: grey;
+    background-color: var(--background-medium);
     margin:var(--margin-minimum);
     border-radius: var(--border-radius-medium);
+    box-shadow: 1px 1px black;
 }
