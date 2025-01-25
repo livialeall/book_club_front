@@ -48,9 +48,9 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div className="display-flex-center align-flex-start">
       <h2>Cadastro</h2>
-      <form action="post" onSubmit={handleSubmit}>
+      <form action="post" onSubmit={handleSubmit} className=" display-flex-justify-center">
         <label htmlFor="name" key="name">
           Nome Completo
           <input type="text" id="name" required/>

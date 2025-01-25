@@ -5,11 +5,11 @@ import Login from "../ui/components/Login";
 const Home = () => {
   return (
     <div className="container">
-      <div className="display-flex-center">
+      <div className="display-flex-center-row home">
         <div className="img">TEXTO INTERESSANTE AQUI</div>
-        <div className="login">
+        <div className="login display-flex-center">
           <Login></Login>
-          <span>ou</span>
+          <div>ou</div>
           <Button
             type={null}
             text={"Faça seu cadastro"}

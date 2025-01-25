@@ -26,16 +26,16 @@ const Login = () => {
 
 
   return (
-    <div>
+    <div className="login-form display-flex-center">
       <h2>Bem Vindo de volta!</h2>
-      <form action="post" onSubmit={handleSubmit}>
-        <label htmlFor="name" key="name">
-          Nome Completo
-          <input type="text" id="name" required/>
-        </label>
-        <label htmlFor="email">
+      <form action="post" onSubmit={handleSubmit} className="display-flex-center">
+        <label htmlFor="email" key="email">
           Email
-          <input type="email" id="email" required/>
+          <input type="text" id="email" required/>
+        </label>
+        <label htmlFor="password">
+          Senha
+          <input type="password" id="password" required/>
         </label>
         <button type="submit">Enviar</button>
       </form>

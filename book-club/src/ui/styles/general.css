@@ -7,11 +7,31 @@
     --margin-minimum:9px;
 }
 
-.display-flex-center{
+.display-flex-center-row{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    height: 100%;
 }
+
+.display-flex-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-flex-justify-center{
+    display: flex;
+    flex-direction: column;
+}
+
+.align-flex-start{
+    display: flex;
+    align-items: flex-start;
+}
+
+
 
 body{
     background-color: white;
