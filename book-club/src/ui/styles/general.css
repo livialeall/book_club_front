@@ -2,29 +2,32 @@
 :root {
     --background-light:#FFF1E9;
     --background-medium:#ca967a;
+    --line-medium:#bb876b;
     --enfase-1-100:#BF7839;    
     --enfase-2-100:#73351F;
     --border-radius-medium:5px;
     --margin-minimum:9px;
+    --margin-small:5px;
 }
 
-.display-flex-center-row{
+form input {
+    padding: 6px 9px;
+    border-radius: var(--border-radius-medium);
+    border: 1px solid var(--line-medium);
+    margin-top:var(--margin-small);
+  
+}
+
+.display-flex-row-justify-center{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 100%;
 }
 
-.display-flex-center{
+.display-flex-column-justify-center{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-}
-
-.display-flex-justify-center{
-    display: flex;
-    flex-direction: column;
 }
 
 .align-flex-start{
@@ -34,11 +37,4 @@
 
 body{
     background-color: white;
-}
-
-.container{
-    background-color:var(--background-light);
-    border-radius: var(--border-radius-medium);
-    margin: var(--margin-minimum);
-    width: 100%;
 }

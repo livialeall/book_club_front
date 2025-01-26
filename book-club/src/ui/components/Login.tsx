@@ -21,14 +21,16 @@ const Login = () => {
         password: password,
       });
     const response = login(user);
-    setRegisterSucess(true)
+    if(response.status == 200){
+      setRegisterSucess(true)
+    }
     }    /* Adicionar ao erros os erros do basck */
 
 
   return (
-    <div className="login-form display-flex-center">
-      <h2>Bem Vindo de volta!</h2>
-      <form action="post" onSubmit={handleSubmit} className="display-flex-center">
+    <div className="">
+      <h2>Login</h2>
+      <form action="post" onSubmit={handleSubmit} className="">
         <label htmlFor="email" key="email">
           Email
           <input type="text" id="email" required/>

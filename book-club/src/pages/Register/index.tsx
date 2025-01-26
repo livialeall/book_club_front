@@ -39,7 +39,9 @@ const Register = () => {
         password: password,
       });
       const response = create_user(newUser);
-      setRegisterSucess(true)
+      if(response.status == 200){
+        setRegisterSucess(true)
+      }
       /* NOTIFICAR QUE FOI CRIADO COM SUCESSO */
       /* IR PARA PAGINA DO USUARIO */
     }else{
