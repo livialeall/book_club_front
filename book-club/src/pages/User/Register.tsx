@@ -10,19 +10,19 @@ const Register = () => {
     contact: "",
     password: "",
   });
-  const [errors,setErrors] = useState<string[]>()
-  const [registerSucess,setRegisterSucess] = useState(false)
+  const [errors, setErrors] = useState<string[]>();
+  const [registerSucess, setRegisterSucess] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    setErrors([])
+    setErrors([]);
 
     const name = form["name"].value;
     const email = form["email"].value;
     const contact = form["contact"].value;
     const password = form["password"].value;
     const confirmPassword = form["confirmPassword"].value;
-    const {check,errors} = checkInformations(
+    const { check, errors } = checkInformations(
       name,
       email,
       contact,
@@ -31,7 +31,7 @@ const Register = () => {
     );
 
     if (check) {
-      setErrors([])
+      setErrors([]);
       setNewUser({
         name: name,
         email: email,
@@ -39,58 +39,48 @@ const Register = () => {
         password: password,
       });
       const response = create_user(newUser);
-      if(response.status == 200){
-        setRegisterSucess(true)
+      if (response.status == 200) {
+        setRegisterSucess(true);
       }
       /* NOTIFICAR QUE FOI CRIADO COM SUCESSO */
       /* IR PARA PAGINA DO USUARIO */
-    }else{
-      setErrors(errors)
+    } else {
+      setErrors(errors);
     }
   };
 
   return (
-    <div className="display-flex-center align-flex-start">
-      <h2>Cadastro</h2>
-      <form action="post" onSubmit={handleSubmit} className=" display-flex-justify-center">
+    <>
+      <form action="post" onSubmit={handleSubmit} className="">
         <label htmlFor="name" key="name">
           Nome Completo
-          <input type="text" id="name" required/>
         </label>
-        <label htmlFor="email">
-          Email
-          <input type="email" id="email" required/>
-        </label>
-        <label htmlFor="contact">
-          Contato
-          <input type="tel" id="contact" required/>
-        </label>
+        <input type="text" id="name" required />
+        <label htmlFor="email">Email</label>
+        <input type="email" id="email" required />
+        <label htmlFor="contact">Contato</label>
+        <input type="tel" id="contact" required />
+
         <label htmlFor="password" id="password">
           Senha
-          <input type="password" id="password" required/>
         </label>
-        <label htmlFor="confirmPassword">
-          Confirmar Senha
-          <input type="password" id="confirmPassword" required/>
-        </label>
+        <input type="password" id="password" required />
+
+        <label htmlFor="confirmPassword">Confirmar Senha</label>
+        <input type="password" id="confirmPassword" required />
+
         <button type="submit">Enviar</button>
       </form>
       {errors?.length > 0 && (
         <div>
           Corrija os erros:
-          {errors.map(
-            (err) => <div>
-              {err}
-            </div>
-          )}
+          {errors.map((err) => (
+            <div>{err}</div>
+          ))}
         </div>
       )}
-      {registerSucess && (
-        <div>
-          Cadastro realizado com sucesso!
-        </div>
-      )}
-    </div>
+      {registerSucess && <div>Cadastro realizado com sucesso!</div>}
+    </>
   );
 };
 
